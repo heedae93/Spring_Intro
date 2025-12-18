@@ -31,6 +31,7 @@ public String helloString(@RequestParam("name") String name) {
 
 ### @ResponseBody로 객체 반환
 - 위와 달리 @ResponseBody가 붙은 상태에서 객체를 반환하게 되면 스프링이 객체를 JSON으로 변환해서 반환한다.
+- 이걸 API 방식으로 볼 수 있다.
 ```java
 @GetMapping("hello-api")
 @ResponseBody
