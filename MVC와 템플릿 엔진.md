@@ -1,6 +1,18 @@
 MVC: Model, View, Controller
 
+### @Controller
 
+- 스프링 MVC의 핵심 컴포넌트인 DispatcherServlet은 들어온 URL 요청을 어떤 메서드가 처리할지 찾는다.
+- 이때 @Controller가 붙은 클래스의 안의 @GetMapping, @PostMapping 등을 찾아서 매핑 지도를 만든다.
+- 만약 클래스 레벨에 @Controller 선언이 없으면  내부 메서드에 @GetMapping 등이 있어도 스프링은 이를 무시한다.
+- 참고로 @Controller는 HTML 뷰 ( 타임리프, JSP) 를 반환할 때 주로 사용한다.
+- @Controller가 붙은 클래스 내부 메서드에서 JSON을 응답하고 싶다면 @ResponseBody를 붙여야 한다.
+
+### @RestController
+
+- @RestController는 한마디로 모든 메서드에 @ResponseBody가 적용된 컨트롤러 라고 이해하면 된다.
+- 메서드의 반환 값이 뷰 이름이 아니라 실제 데이터 ( JSON , XML )로 처리 된다.
+- 자바 객체를 리턴하면 스프링이 알아서 JSON 형식으로 바꿔준다.
 
 ### @RequestParam
 - 브라우저에서 요청한 파라미터를 매핑할 수 있다.
