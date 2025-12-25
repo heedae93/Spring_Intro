@@ -1,5 +1,6 @@
 package com.spring.intro;
 
+import com.spring.intro.aop.TimeTraceAop;
 import com.spring.intro.repository.*;
 import com.spring.intro.service.MemberService;
 import jakarta.persistence.EntityManager;
@@ -22,6 +23,8 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+
 
 //    @Bean
 //    public MemberRepository memberRepository() {
