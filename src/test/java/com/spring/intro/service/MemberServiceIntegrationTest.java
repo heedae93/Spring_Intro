@@ -27,7 +27,7 @@ class MemberServiceIntegrationTest {
     @Test
     void join() {
         Member member = new Member();
-        member.setName("spring");
+        member.setName("spring10");
 
         Long saveId = memberService.join(member);
 
@@ -38,9 +38,9 @@ class MemberServiceIntegrationTest {
     @Test
     void duplicateExceptionTest() {
         Member member1 = new Member();
-        member1.setName("spring");
+        member1.setName("spring10");
         Member member2 = new Member();
-        member2.setName("spring");
+        member2.setName("spring10");
 
         memberService.join(member1);
         IllegalStateException e = assertThrows(IllegalStateException.class,
